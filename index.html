@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Programa Fígado Livre: reduza a gordura no fígado de forma segura</title>
+<meta name="description" content="Programa Fígado Livre: plano alimentar e guia prático para ajudar a reduzir a gordura acumulada no fígado. Oferta única de 7,90€.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --forest-deep:#16241c;
+    --forest:#2f5233;
+    --forest-soft:#3f6b46;
+    --gold:#c89b3c;
+    --gold-soft:#e0c37e;
+    --sage-bg:#eef0e4;
+    --paper:#ffffff;
+    --rust:#8b4a3d;
+    --ink:#16241c;
+    --ink-soft:#3f4a41;
+    --line: rgba(22,36,28,0.12);
+    --radius: 4px;
+    --max-w: 680px;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+
+  body{
+    margin:0;
+    background:var(--sage-bg);
+    color:var(--ink);
+    font-family:'Karla', sans-serif;
+    font-size:17px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  h1,h2,h3{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    line-height:1.15;
+    letter-spacing:-0.01em;
+    color:var(--forest-deep);
+    margin:0 0 0.5em;
+  }
+
+  p{margin:0 0 1.1em;}
+
+  .wrap{
+    max-width:var(--max-w);
+    margin:0 auto;
+    padding:0 24px;
+  }
+
+  a{color:inherit;}
+
+  img{max-width:100%;display:block;}
+
+  /* ---------- Divider (leaf motif, replaces generic hairline) ---------- */
+  .divider{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:14px;
+    margin:56px 0;
+    opacity:0.55;
+  }
+  .divider svg{width:26px;height:26px;color:var(--forest-soft);}
+  .divider .line{flex:1;max-width:70px;height:1px;background:var(--line);}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    background:var(--forest-deep);
+    color:#f4f3ec;
+    padding:72px 0 88px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero::after{
+    content:"";
+    position:absolute;
+    right:-120px;
+    top:-120px;
+    width:360px;
+    height:360px;
+    border-radius:50%;
+    background:radial-gradient(circle, rgba(200,155,60,0.18), transparent 70%);
+  }
+  .hero .eyebrow-plain{
+    font-size:15px;
+    color:var(--gold-soft);
+    margin-bottom:18px;
+    font-weight:600;
+  }
+  .hero h1{
+    color:#faf9f3;
+    font-size:clamp(32px, 6vw, 44px);
+    max-width:15ch;
+  }
+  .hero p.lede{
+    font-size:19px;
+    color:#d8dccf;
+    max-width:44ch;
+    margin-top:18px;
+  }
+  .hero .anim-in{
+    opacity:0;
+    transform:translateY(14px);
+    animation:heroIn 0.7s ease-out forwards;
+  }
+  .hero .anim-in:nth-child(1){animation-delay:0s;}
+  .hero .anim-in:nth-child(2){animation-delay:0.12s;}
+  .hero .anim-in:nth-child(3){animation-delay:0.24s;}
+  .hero .anim-in:nth-child(4){animation-delay:0.36s;}
+  @keyframes heroIn{to{opacity:1;transform:translateY(0);}}
+  @media (prefers-reduced-motion: reduce){
+    .hero .anim-in{animation:none;opacity:1;transform:none;}
+  }
+
+  /* ---------- Buttons ---------- */
+  .btn{
+    display:inline-block;
+    background:var(--gold);
+    color:var(--forest-deep);
+    font-family:'Karla', sans-serif;
+    font-weight:700;
+    font-size:17px;
+    padding:16px 30px;
+    border-radius:var(--radius);
+    text-decoration:none;
+    border:none;
+    cursor:pointer;
+    transition:background 0.15s ease, transform 0.1s ease;
+  }
+  .btn:hover{background:var(--gold-soft);}
+  .btn:active{transform:scale(0.98);}
+  .btn:focus-visible{outline:3px solid #fff; outline-offset:3px;}
+  .btn-block{display:block;width:100%;text-align:center;}
+  .btn-dark{background:var(--forest-deep);color:#faf9f3;}
+  .btn-dark:hover{background:var(--forest);}
+
+  .microcopy{
+    font-size:14px;
+    color:#a9ae9f;
+    margin-top:12px;
+  }
+  .hero .microcopy{color:#a9ae9f;}
+
+  /* ---------- Sections ---------- */
+  section{padding:56px 0;}
+  .section-tight{padding:36px 0;}
+
+  .quote{
+    font-family:'Fraunces', serif;
+    font-size:21px;
+    font-style:italic;
+    color:var(--forest);
+    border-left:3px solid var(--gold);
+    padding-left:20px;
+    margin:28px 0;
+  }
+
+  /* ---------- Benefits list ---------- */
+  .benefits{
+    background:var(--forest-deep);
+    color:#f4f3ec;
+  }
+  .benefits h2{color:#faf9f3;}
+  .benefit-list{
+    list-style:none;
+    padding:0;
+    margin:32px 0 0;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:14px 28px;
+  }
+  .benefit-list li{
+    padding-left:24px;
+    position:relative;
+    font-size:15.5px;
+    color:#dfe3d5;
+  }
+  .benefit-list li::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:9px;
+    width:8px;
+    height:8px;
+    background:var(--gold);
+    border-radius:50%;
+  }
+  @media (max-width:560px){
+    .benefit-list{grid-template-columns:1fr;}
+  }
+
+  /* ---------- Symptom card ---------- */
+  .card{
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:28px 26px;
+  }
+  .symptom-list{
+    margin:18px 0 0;
+    padding-left:20px;
+  }
+  .symptom-list li{margin-bottom:8px;color:var(--ink-soft);}
+
+  /* ---------- Includes ---------- */
+  .includes{
+    display:grid;
+    gap:22px;
+    margin-top:32px;
+  }
+  .includes .item{
+    display:flex;
+    gap:16px;
+    align-items:flex-start;
+  }
+  .includes .mark{
+    flex:0 0 auto;
+    width:34px;height:34px;
+    border-radius:50%;
+    background:var(--sage-bg);
+    border:1px solid var(--line);
+    display:flex;align-items:center;justify-content:center;
+    color:var(--forest);
+  }
+  .includes h3{font-size:18px;margin-bottom:4px;}
+  .includes p{margin:0;color:var(--ink-soft);font-size:15.5px;}
+
+  /* ---------- Bonus strip ---------- */
+  .bonus-strip{
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:24px;
+  }
+  .bonus-strip .tag{
+    display:inline-block;
+    font-size:13px;
+    color:var(--rust);
+    font-weight:700;
+    margin-bottom:10px;
+  }
+  .bonus-strip ul{margin:0;padding-left:20px;}
+  .bonus-strip li{margin-bottom:6px;}
+
+  /* ---------- Pricing ---------- */
+  .pricing{
+    background:var(--forest-deep);
+    color:#f4f3ec;
+    text-align:center;
+  }
+  .pricing .kicker{
+    color:var(--gold-soft);
+    font-weight:600;
+    margin-bottom:6px;
+  }
+  .price-card{
+    background:#1d3327;
+    border:1px solid rgba(200,155,60,0.35);
+    border-radius:6px;
+    padding:40px 28px;
+    margin:28px auto 0;
+    max-width:460px;
+  }
+  .price-was{
+    text-decoration:line-through;
+    color:#8f9787;
+    font-size:16px;
+  }
+  .price-now{
+    font-family:'Fraunces', serif;
+    font-size:56px;
+    color:#faf9f3;
+    margin:6px 0 2px;
+    font-weight:600;
+  }
+  .price-now sup{font-size:22px;top:-1.4em;}
+  .price-terms{
+    color:#c3c9b7;
+    font-size:15px;
+    margin-bottom:22px;
+  }
+  .price-includes{
+    text-align:left;
+    list-style:none;
+    padding:0;
+    margin:0 0 26px;
+  }
+  .price-includes li{
+    padding:9px 0;
+    border-top:1px solid rgba(255,255,255,0.08);
+    color:#dfe3d5;
+    font-size:15px;
+  }
+  .price-includes li:first-child{border-top:none;}
+
+  .urgency{
+    margin-top:18px;
+    color:var(--gold-soft);
+    font-size:14.5px;
+  }
+
+  /* ---------- Guarantee ---------- */
+  .guarantee{
+    display:flex;
+    gap:20px;
+    align-items:flex-start;
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:26px;
+  }
+  .guarantee svg{flex:0 0 auto;width:46px;height:46px;color:var(--forest);}
+
+  /* ---------- FAQ ---------- */
+  details{
+    border-bottom:1px solid var(--line);
+    padding:18px 0;
+  }
+  summary{
+    font-family:'Fraunces', serif;
+    font-size:18px;
+    color:var(--forest-deep);
+    cursor:pointer;
+    list-style:none;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:16px;
+  }
+  summary::-webkit-details-marker{display:none;}
+  summary::after{
+    content:"+";
+    font-size:22px;
+    color:var(--gold);
+    flex:0 0 auto;
+  }
+  details[open] summary::after{content:"–";}
+  details p{margin-top:12px;color:var(--ink-soft);}
+  details:focus-within summary, summary:focus-visible{outline:2px solid var(--forest); outline-offset:4px;}
+
+  /* ---------- Footer ---------- */
+  footer{
+    background:var(--forest-deep);
+    color:#a9ae9f;
+    padding:40px 0;
+    font-size:13px;
+  }
+  footer a{color:#dfe3d5;text-decoration:underline;}
+  footer .legal{margin-top:18px;line-height:1.7;}
+
+  /* ---------- Image placeholders ---------- */
+  .img-block{
+    margin:32px 0 0;
+    border-radius:var(--radius);
+    overflow:hidden;
+  }
+  .img-block img{width:100%;height:auto;display:block;}
+  .img-caption{
+    font-size:13px;
+    color:#a9ae9f;
+    margin-top:8px;
+    text-align:center;
+  }
+  .hero .img-block{
+    margin-top:40px;
+    border:1px solid rgba(200,155,60,0.3);
+  }
+  .card .img-block{margin-top:22px;}
+  .card .img-caption{color:var(--ink-soft);}
+
+  /* ---------- Testimonials ---------- */
+  .testimonial-note{
+    font-size:13px;
+    color:var(--rust);
+    background:#f7ece9;
+    border:1px solid rgba(139,74,61,0.25);
+    border-radius:var(--radius);
+    padding:10px 14px;
+    margin:18px 0 8px;
+  }
+  .testimonial-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+    margin-top:28px;
+  }
+  @media (max-width:560px){
+    .testimonial-grid{grid-template-columns:1fr;}
+  }
+  .testimonial{
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:22px;
+  }
+  .testimonial .stars{
+    color:var(--gold);
+    font-size:15px;
+    letter-spacing:2px;
+    margin-bottom:10px;
+  }
+  .testimonial p.quote-text{
+    font-family:'Fraunces', serif;
+    font-style:italic;
+    font-size:16.5px;
+    color:var(--ink);
+    margin:0 0 16px;
+  }
+  .testimonial .author{
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .testimonial .avatar{
+    width:36px;height:36px;
+    border-radius:50%;
+    background:var(--sage-bg);
+    border:1px solid var(--line);
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    color:var(--forest);
+    font-size:14px;
+    flex:0 0 auto;
+  }
+  .testimonial .author-name{font-weight:700;font-size:14.5px;color:var(--forest-deep);}
+  .testimonial .author-loc{font-size:13px;color:#8f9784;}
+
+  /* ---------- Sticky mobile CTA ---------- */
+  .sticky-cta{
+    position:fixed;
+    bottom:0;left:0;right:0;
+    background:var(--forest-deep);
+    padding:12px 16px;
+    border-top:1px solid rgba(200,155,60,0.3);
+    z-index:50;
+    display:none;
+  }
+  @media (max-width:640px){
+    .sticky-cta{display:block;}
+    body{padding-bottom:70px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow-plain anim-in">Programa Fígado Livre</p>
+    <h1 class="anim-in">Reduza a gordura acumulada no fígado, com um plano simples de seguir</h1>
+
+    <div class="img-block anim-in" style="max-width:420px;margin-top:28px;margin-bottom:8px;">
+      <img src="imagens/figado-especialista-hero.jpg" alt="Profissional de saúde de jaleco segurando um modelo de fígado saudável">
+    </div>
+
+    <p class="lede anim-in">Um plano alimentar e um guia prático, pensados para ajudar o seu fígado a recuperar o equilíbrio, sem dietas extremas nem regras impossíveis de manter.</p>
+    <div class="anim-in" style="margin-top:30px;">
+      <a href="#oferta" class="btn">Quero começar hoje</a>
+      <p class="microcopy">Pagamento único · Acesso imediato · Garantia de 14 dias</p>
+    </div>
+
+    <div class="img-block anim-in">
+      <img src="imagens/figado-comparativo-hero.jpg" alt="Comparativo entre um fígado saudável e um fígado com acumulação de gordura">
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section>
+    <div class="wrap">
+      <p>Esta é uma das perguntas que mais nos colocam todos os dias: é mesmo possível reduzir a gordura no fígado sem passar por tratamentos complicados?</p>
+      <p>A resposta é sim, com cuidado, consistência e o método certo.</p>
+
+      <p class="quote">"Já ajudámos milhares de pessoas a reorganizar a alimentação para dar mais descanso ao fígado, de forma simples e sem sofrimento."</p>
+
+      <p>O Programa Fígado Livre foi construído a partir de orientações de nutrição e saúde, para que possa aplicar mudanças reais sem se tornar especialista no assunto nem passar horas a pesquisar.</p>
+      <p>Só precisa de seguir o plano, um dia de cada vez.</p>
+    </div>
+  </section>
+
+  <div class="divider">
+    <div class="line"></div>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 3c-4 3-7 7-7 11a7 7 0 0014 0c0-4-3-8-7-11z"/></svg>
+    <div class="line"></div>
+  </div>
+
+  <section>
+    <div class="wrap card">
+      <h2>Este programa pode ser para si se sente...</h2>
+      <p style="color:var(--ink-soft);">O fígado gordo, ou esteatose hepática, é uma condição em que a gordura se acumula no fígado e pode comprometer o seu funcionamento normal. Nem sempre dá sintomas, mas quando aparecem, podem incluir:</p>
+      <ul class="symptom-list">
+        <li>Fadiga e cansaço fora do normal</li>
+        <li>Desconforto na zona abdominal superior, sobretudo do lado direito</li>
+        <li>Inchaço abdominal frequente</li>
+        <li>Falta de apetite</li>
+        <li>Perda de peso sem explicação aparente</li>
+        <li>Dificuldade de concentração ou sensação de "cabeça pesada"</li>
+      </ul>
+      <p style="margin-top:16px;">Se reconhece um ou mais destes sinais, este programa foi pensado para si.</p>
+
+      <div class="img-block">
+        <img src="imagens/figado-infografico-sintomas.jpg" alt="Infográfico comparando um fígado saudável e um fígado com esteatose hepática">
+        <p class="img-caption">Fígado saudável vs. fígado com acumulação de gordura</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="benefits">
+    <div class="wrap">
+      <img src="imagens/figado-icone.png" alt="" style="width:40px;height:40px;margin-bottom:16px;">
+      <h2>O que pode notar ao longo do programa</h2>
+      <ul class="benefit-list">
+        <li>Menos fadiga e mais disposição</li>
+        <li>Apoio à função hepática</li>
+        <li>Alívio do desconforto abdominal</li>
+        <li>Metabolismo mais equilibrado</li>
+        <li>Redução do inchaço</li>
+        <li>Apoio à desintoxicação natural</li>
+        <li>Mais energia ao longo do dia</li>
+        <li>Apoio à perda de peso</li>
+        <li>Menos retenção de líquidos</li>
+        <li>Equilíbrio do colesterol</li>
+        <li>Apoio à pressão arterial saudável</li>
+        <li>Maior sensação de saciedade</li>
+      </ul>
+      <div style="margin-top:36px;">
+        <a href="#oferta" class="btn">Quero sentir estes benefícios</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>O que vai encontrar dentro do programa</h2>
+      <div class="includes">
+        <div class="item">
+          <div class="mark"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12l6 6L20 6"/></svg></div>
+          <div>
+            <h3>Plano alimentar de limpeza hepática</h3>
+            <p>Receitas simples e práticas, pensadas para o dia a dia, sem ingredientes difíceis de encontrar.</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="mark"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12l6 6L20 6"/></svg></div>
+          <div>
+            <h3>Guia explicativo</h3>
+            <p>Perceba as causas do fígado gordo e como funciona um tratamento adequado, explicado em linguagem simples.</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="mark"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12l6 6L20 6"/></svg></div>
+          <div>
+            <h3>Apoio via WhatsApp</h3>
+            <p>Tire dúvidas e seja acompanhado ao longo de todo o programa.</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="mark"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12l6 6L20 6"/></svg></div>
+          <div>
+            <h3>Acesso 100% online</h3>
+            <p>Aceda de onde estiver, pelo telemóvel ou computador, sempre que precisar.</p>
+          </div>
+        </div>
+      </div>
+      <p style="margin-top:28px;">Vai poder trabalhar a redução de peso e de gordura no fígado sem deixar de comer aquilo de que gosta. O plano foi pensado para se adaptar à sua rotina, não o contrário.</p>
+    </div>
+  </section>
+
+  <div class="divider">
+    <div class="line"></div>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 3c-4 3-7 7-7 11a7 7 0 0014 0c0-4-3-8-7-11z"/></svg>
+    <div class="line"></div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <h2>Bónus incluídos hoje</h2>
+      <p style="color:var(--ink-soft);">Estes bónus deixam de estar disponíveis fora do período da promoção.</p>
+      <div class="bonus-strip">
+        <div class="img-block" style="margin-top:0;margin-bottom:20px;">
+          <img src="imagens/figado-receitas-bonus.jpg" alt="Livro de receitas para o fígado com tigelas de sobremesas saudáveis sem açúcar">
+        </div>
+        <span class="tag">Incluído na oferta de hoje</span>
+        <ul>
+          <li>Receitas doces sem açúcar</li>
+          <li>Receitas doces low carb</li>
+          <li>Guia complementar de hábitos saudáveis</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>O que dizem quem já experimentou</h2>
+      <p class="testimonial-note">⚠️ Texto de exemplo: substituir por depoimentos reais de clientes antes de publicar a página.</p>
+
+      <div class="testimonial-grid">
+        <div class="testimonial">
+          <div class="stars">★★★★★</div>
+          <p class="quote-text">"Segui o plano alimentar durante três semanas e já sinto muito menos inchaço depois das refeições. As receitas são fáceis de fazer no dia a dia."</p>
+          <div class="author">
+            <div class="avatar">MC</div>
+            <div>
+              <div class="author-name">Marta C.</div>
+              <div class="author-loc">Porto</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial">
+          <div class="stars">★★★★★</div>
+          <p class="quote-text">"O que mais gostei foi não ter de eliminar tudo o que gosto de comer. O guia explica tudo de forma simples, sem complicações."</p>
+          <div class="author">
+            <div class="avatar">JP</div>
+            <div>
+              <div class="author-name">João P.</div>
+              <div class="author-loc">Lisboa</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial">
+          <div class="stars">★★★★★</div>
+          <p class="quote-text">"Tinha muitas dúvidas sobre o que podia ou não comer. Este programa organizou tudo por mim, e o suporte via WhatsApp ajudou bastante."</p>
+          <div class="author">
+            <div class="avatar">SR</div>
+            <div>
+              <div class="author-name">Sandra R.</div>
+              <div class="author-loc">Braga</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial">
+          <div class="stars">★★★★★</div>
+          <p class="quote-text">"Comprei sem grandes expectativas pelo preço, mas o conteúdo é muito mais completo do que esperava. Recomendo a quem quer começar aos poucos."</p>
+          <div class="author">
+            <div class="avatar">RA</div>
+            <div>
+              <div class="author-name">Rui A.</div>
+              <div class="author-loc">Coimbra</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="oferta" class="pricing">
+    <div class="wrap">
+      <p class="kicker">Oferta válida apenas hoje</p>
+      <h2 style="color:#faf9f3;">Garanta o seu acesso ao Programa Fígado Livre</h2>
+
+      <div class="price-card">
+        <p class="price-was">Valor de referência: 79€</p>
+        <p class="price-now"><sup>€</sup>7,90</p>
+        <p class="price-terms">Pagamento único · sem mensalidades</p>
+
+        <ul class="price-includes">
+          <li>Plano alimentar completo para o fígado</li>
+          <li>Programa Fígado Livre: guia principal</li>
+          <li>Princípios para limpar o fígado</li>
+          <li>Receitas doces sem açúcar</li>
+          <li>Receitas doces low carb</li>
+          <li>Guia de alívio digestivo</li>
+          <li>Receitas vegetarianas</li>
+          <li>Acesso vitalício e todas as atualizações</li>
+        </ul>
+
+        <a href="#" class="btn btn-block">Quero o programa por 7,90€</a>
+        <p class="microcopy">Acesso imediato após a confirmação do pagamento</p>
+      </div>
+
+      <p class="urgency">Este preço não se mantém depois de terminada a promoção.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="guarantee">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z"/><path d="M9 12l2 2 4-4"/></svg>
+        <div>
+          <h3 style="margin-bottom:6px;">Garantia de 14 dias</h3>
+          <p style="margin:0;color:var(--ink-soft);">Se sentir que o programa não é para si, tem até 14 dias após a compra para pedir o reembolso, sem perguntas. O risco é todo nosso.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>Perguntas frequentes</h2>
+
+      <details open>
+        <summary>O pagamento é único ou mensal?</summary>
+        <p>É um pagamento único de 7,90€. Não existem mensalidades nem cobranças escondidas.</p>
+      </details>
+      <details>
+        <summary>Em quanto tempo recebo o acesso?</summary>
+        <p>Imediatamente. Assim que o pagamento for confirmado (por cartão, Multibanco ou MB WAY), recebe os dados de acesso no e-mail utilizado na compra.</p>
+      </details>
+      <details>
+        <summary>E se eu não gostar do programa?</summary>
+        <p>Tem 14 dias a partir da compra para pedir reembolso total, sem qualquer justificação necessária.</p>
+      </details>
+      <details>
+        <summary>Preciso de ter conhecimentos de nutrição?</summary>
+        <p>Não. O programa foi feito para ser seguido por qualquer pessoa, com explicações simples e receitas práticas.</p>
+      </details>
+
+      <div style="margin-top:36px;text-align:center;">
+        <a href="#oferta" class="btn btn-dark">Adquirir agora</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><a href="#">Política de Privacidade</a> &nbsp;|&nbsp; <a href="#">Termos de Uso</a></p>
+    <p class="legal">O e-book Programa Fígado Livre tem caráter meramente informativo e, embora as orientações apresentadas se baseiem em referências de saúde e nutrição, o seu conteúdo não substitui o acompanhamento de profissionais de saúde. As informações divulgadas não podem ser utilizadas para o tratamento de doenças. Se sofre de alguma condição de saúde e pretende iniciar um plano para reduzir a gordura no fígado, consulte primeiro o seu médico. Os resultados variam de pessoa para pessoa, pelo que não é possível garantir resultados com base em casos individuais. É proibida a reprodução do conteúdo deste material sem autorização prévia da autora.</p>
+  </div>
+</footer>
+
+<div class="sticky-cta">
+  <a href="#oferta" class="btn btn-block">Quero por 7,90€</a>
+</div>
+
+</body>
+</html>
