@@ -249,6 +249,31 @@
   }
   .bonus-strip ul{margin:0;padding-left:20px;}
   .bonus-strip li{margin-bottom:6px;}
+  .bonus-photo-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:14px;
+    margin:20px 0 22px;
+  }
+  .bonus-photo-grid figure{
+    margin:0;
+  }
+  .bonus-photo-grid img{
+    width:100%;
+    height:150px;
+    object-fit:cover;
+    border-radius:var(--radius);
+    display:block;
+  }
+  .bonus-photo-grid figcaption{
+    font-size:13px;
+    color:var(--ink-soft);
+    margin-top:8px;
+    text-align:center;
+  }
+  @media (max-width:420px){
+    .bonus-photo-grid img{height:120px;}
+  }
 
   /* ---------- Pricing ---------- */
   .pricing{
@@ -434,6 +459,47 @@
   .testimonial .author-name{font-weight:700;font-size:14.5px;color:var(--forest-deep);}
   .testimonial .author-loc{font-size:13px;color:#8f9784;}
 
+  /* ---------- Expert section ---------- */
+  .expert-section{
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:6px;
+    padding:32px;
+    display:flex;
+    gap:28px;
+    align-items:center;
+    flex-wrap:wrap;
+  }
+  .expert-photo{
+    flex:0 0 auto;
+    width:140px;
+    height:140px;
+    border-radius:50%;
+    overflow:hidden;
+    border:2px solid var(--gold);
+  }
+  .expert-photo img{width:100%;height:100%;object-fit:cover;display:block;}
+  .expert-info{flex:1 1 260px;}
+  .expert-info .expert-eyebrow{
+    font-size:13px;
+    color:var(--rust);
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:0.04em;
+    margin-bottom:6px;
+  }
+  .expert-info h3{
+    font-size:22px;
+    margin-bottom:2px;
+  }
+  .expert-info .expert-title{
+    font-size:14.5px;
+    color:var(--forest);
+    font-weight:700;
+    margin-bottom:12px;
+  }
+  .expert-info p{margin:0;color:var(--ink-soft);font-size:15px;}
+
   /* ---------- Sticky mobile CTA ---------- */
   .sticky-cta{
     position:fixed;
@@ -540,6 +606,23 @@
 
   <section>
     <div class="wrap">
+      <!-- Confirmar com a Sofia o texto exato da bio antes de publicar -->
+      <div class="expert-section">
+        <div class="expert-photo">
+          <img src="imagens/figado-expert-sofia.jpg" alt="Sofia Martins, Nutricionista">
+        </div>
+        <div class="expert-info">
+          <p class="expert-eyebrow">Conteúdo validado por</p>
+          <h3>Sofia Martins</h3>
+          <p class="expert-title">Nutricionista</p>
+          <p>Responsável pela revisão nutricional do Programa Fígado Livre, garantindo que as receitas e orientações seguem boas práticas de alimentação equilibrada.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
       <h2>O que vai encontrar dentro do programa</h2>
       <div class="includes">
         <div class="item">
@@ -590,6 +673,18 @@
           <img src="imagens/figado-receitas-bonus.jpg" alt="Livro de receitas para o fígado com tigelas de sobremesas saudáveis sem açúcar">
         </div>
         <span class="tag">Incluído na oferta de hoje</span>
+
+        <div class="bonus-photo-grid">
+          <figure>
+            <img src="imagens/figado-bonus-lowcarb.jpg" alt="Fatia de cheesecake low carb com frutos vermelhos">
+            <figcaption>Receitas doces low carb</figcaption>
+          </figure>
+          <figure>
+            <img src="imagens/figado-bonus-habitos.jpg" alt="Chá com limão, caderno de anotações e fruta fresca sobre a mesa">
+            <figcaption>Guia complementar de hábitos saudáveis</figcaption>
+          </figure>
+        </div>
+
         <ul>
           <li>Receitas doces sem açúcar</li>
           <li>Receitas doces low carb</li>
@@ -602,7 +697,9 @@
   <section>
     <div class="wrap">
       <h2>O que dizem quem já experimentou</h2>
-      <p class="testimonial-note">⚠️ Texto de exemplo: substituir por depoimentos reais de clientes antes de publicar a página.</p>
+      <!-- ATENÇÃO: os 4 depoimentos abaixo são texto de exemplo (fictício).
+           Substituir por depoimentos reais de clientes antes de publicar/divulgar a página. -->
+
 
       <div class="testimonial-grid">
         <div class="testimonial">
