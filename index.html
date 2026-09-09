@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Programa Fígado Livre: reduza a gordura no fígado de forma segura</title>
-<meta name="description" content="Programa Fígado Livre: plano alimentar e guia prático para ajudar a reduzir a gordura acumulada no fígado. Oferta única de 7,90€.">
+<meta name="description" content="Programa Fígado Livre: plano alimentar e guia prático para ajudar a reduzir a gordura acumulada no fígado. Planos a partir de 7,90€.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -500,6 +500,141 @@
   }
   .expert-info p{margin:0;color:var(--ink-soft);font-size:15px;}
 
+  /* ---------- Urgency bar ---------- */
+  .urgency-bar{
+    background:var(--gold);
+    color:var(--forest-deep);
+    text-align:center;
+    padding:10px 16px;
+    font-size:14.5px;
+    font-weight:700;
+    position:sticky;
+    top:0;
+    z-index:60;
+  }
+
+  /* ---------- Two-plan pricing ---------- */
+  .plans-grid{
+    display:flex;
+    flex-direction:column;
+    gap:28px;
+    margin-top:30px;
+  }
+  .plan-card{
+    background:#1d3327;
+    border:1px solid rgba(200,155,60,0.25);
+    border-radius:6px;
+    padding:30px 26px;
+    text-align:left;
+    position:relative;
+  }
+  .plan-featured{
+    border:2px solid var(--gold);
+    background:#20392b;
+    box-shadow:0 10px 34px rgba(0,0,0,0.35);
+  }
+  .plan-badge{
+    position:absolute;
+    top:-14px;
+    left:50%;
+    transform:translateX(-50%);
+    background:var(--gold);
+    color:var(--forest-deep);
+    font-size:12px;
+    font-weight:800;
+    padding:6px 18px;
+    border-radius:20px;
+    letter-spacing:0.04em;
+    text-transform:uppercase;
+    white-space:nowrap;
+  }
+  .plan-tag{
+    font-size:12.5px;
+    color:var(--gold-soft);
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:0.03em;
+    margin-bottom:4px;
+  }
+  .plan-title{
+    font-family:'Fraunces', serif;
+    font-size:23px;
+    color:#faf9f3;
+    margin-bottom:18px;
+  }
+  .plan-price{
+    display:flex;
+    align-items:baseline;
+    gap:6px;
+    margin-bottom:4px;
+  }
+  .plan-price .amount{
+    font-family:'Fraunces', serif;
+    font-size:38px;
+    font-weight:600;
+    color:#faf9f3;
+  }
+  .plan-price .amount sup{font-size:16px;top:-1.2em;}
+  .plan-terms{
+    color:#a9ae9f;
+    font-size:13.5px;
+    margin-bottom:20px;
+  }
+  .plan-includes{
+    list-style:none;
+    padding:0;
+    margin:0 0 8px;
+  }
+  .plan-includes li{
+    padding:7px 0;
+    border-top:1px solid rgba(255,255,255,0.08);
+    color:#dfe3d5;
+    font-size:14.5px;
+  }
+  .plan-includes li:first-child{border-top:none;}
+  .plan-includes-lede{
+    font-size:13.5px;
+    color:var(--gold-soft);
+    font-weight:700;
+    margin:16px 0 6px;
+  }
+  .plan-bonus-box{
+    background:rgba(200,155,60,0.08);
+    border:1px solid rgba(200,155,60,0.3);
+    border-radius:4px;
+    padding:16px 18px;
+    margin-top:18px;
+  }
+  .plan-bonus-box .bonus-heading{
+    font-size:13.5px;
+    font-weight:800;
+    color:var(--gold-soft);
+    margin-bottom:8px;
+    text-transform:uppercase;
+    letter-spacing:0.02em;
+  }
+  .plan-bonus-box ul{list-style:none;padding:0;margin:0;}
+  .plan-bonus-box li{
+    color:#dfe3d5;
+    font-size:14px;
+    padding:4px 0;
+  }
+  .plan-cta{margin-top:22px;}
+
+  /* ---------- Fade-in on scroll ---------- */
+  .reveal{
+    opacity:0;
+    transform:translateY(28px);
+    transition:opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.is-visible{
+    opacity:1;
+    transform:translateY(0);
+  }
+  @media (prefers-reduced-motion: reduce){
+    .reveal{opacity:1;transform:none;transition:none;}
+  }
+
   /* ---------- Sticky mobile CTA ---------- */
   .sticky-cta{
     position:fixed;
@@ -515,13 +650,36 @@
     body{padding-bottom:70px;}
   }
 </style>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '3651076031697372');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=3651076031697372&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
 </head>
 <body>
+
+<div class="urgency-bar">
+  Oferta de lançamento por tempo limitado &nbsp;·&nbsp; Planos a partir de 7,90€
+</div>
 
 <header class="hero">
   <div class="wrap">
     <p class="eyebrow-plain anim-in">Programa Fígado Livre</p>
-    <h1 class="anim-in">Reduza a gordura acumulada no fígado, com um plano simples de seguir</h1>
+    <h1 class="anim-in">Fígado Gordo? Está na Hora de Cuidar de Si.</h1>
 
     <div class="img-block anim-in" style="max-width:420px;margin-top:28px;margin-bottom:8px;">
       <img src="imagens/figado-especialista-hero.jpg" alt="Profissional de saúde de jaleco segurando um modelo de fígado saudável">
@@ -541,7 +699,7 @@
 
 <main>
 
-  <section>
+  <section class="reveal">
     <div class="wrap">
       <p>Esta é uma das perguntas que mais nos colocam todos os dias: é mesmo possível reduzir a gordura no fígado sem passar por tratamentos complicados?</p>
       <p>A resposta é sim, com cuidado, consistência e o método certo.</p>
@@ -559,7 +717,7 @@
     <div class="line"></div>
   </div>
 
-  <section>
+  <section class="reveal">
     <div class="wrap card">
       <h2>Este programa pode ser para si se sente...</h2>
       <p style="color:var(--ink-soft);">O fígado gordo, ou esteatose hepática, é uma condição em que a gordura se acumula no fígado e pode comprometer o seu funcionamento normal. Nem sempre dá sintomas, mas quando aparecem, podem incluir:</p>
@@ -580,7 +738,7 @@
     </div>
   </section>
 
-  <section class="benefits">
+  <section class="benefits reveal">
     <div class="wrap">
       <img src="imagens/figado-icone.png" alt="" style="width:40px;height:40px;margin-bottom:16px;">
       <h2>O que pode notar ao longo do programa</h2>
@@ -604,16 +762,16 @@
     </div>
   </section>
 
-  <section>
+  <section class="reveal">
     <div class="wrap">
-      <!-- Confirmar com a Sofia o texto exato da bio antes de publicar -->
+      <!-- Confirmar com a Ana o texto exato da bio antes de publicar -->
       <div class="expert-section">
         <div class="expert-photo">
-          <img src="imagens/figado-expert-sofia.jpg" alt="Sofia Martins, Nutricionista">
+          <img src="imagens/figado-expert-ana.jpg" alt="Ana Martins, Nutricionista">
         </div>
         <div class="expert-info">
           <p class="expert-eyebrow">Conteúdo validado por</p>
-          <h3>Sofia Martins</h3>
+          <h3>Ana Martins</h3>
           <p class="expert-title">Nutricionista</p>
           <p>Responsável pela revisão nutricional do Programa Fígado Livre, garantindo que as receitas e orientações seguem boas práticas de alimentação equilibrada.</p>
         </div>
@@ -621,7 +779,7 @@
     </div>
   </section>
 
-  <section>
+  <section class="reveal">
     <div class="wrap">
       <h2>O que vai encontrar dentro do programa</h2>
       <div class="includes">
@@ -664,7 +822,7 @@
     <div class="line"></div>
   </div>
 
-  <section>
+  <section class="reveal">
     <div class="wrap">
       <h2>Bónus incluídos hoje</h2>
       <p style="color:var(--ink-soft);">Estes bónus deixam de estar disponíveis fora do período da promoção.</p>
@@ -694,7 +852,7 @@
     </div>
   </section>
 
-  <section>
+  <section class="reveal">
     <div class="wrap">
       <h2>O que dizem quem já experimentou</h2>
       <!-- ATENÇÃO: os 4 depoimentos abaixo são texto de exemplo (fictício).
@@ -702,7 +860,7 @@
 
 
       <div class="testimonial-grid">
-        <div class="testimonial">
+        <div class="testimonial reveal">
           <div class="stars">★★★★★</div>
           <p class="quote-text">"Segui o plano alimentar durante três semanas e já sinto muito menos inchaço depois das refeições. As receitas são fáceis de fazer no dia a dia."</p>
           <div class="author">
@@ -714,7 +872,7 @@
           </div>
         </div>
 
-        <div class="testimonial">
+        <div class="testimonial reveal">
           <div class="stars">★★★★★</div>
           <p class="quote-text">"O que mais gostei foi não ter de eliminar tudo o que gosto de comer. O guia explica tudo de forma simples, sem complicações."</p>
           <div class="author">
@@ -726,7 +884,7 @@
           </div>
         </div>
 
-        <div class="testimonial">
+        <div class="testimonial reveal">
           <div class="stars">★★★★★</div>
           <p class="quote-text">"Tinha muitas dúvidas sobre o que podia ou não comer. Este programa organizou tudo por mim, e o suporte via WhatsApp ajudou bastante."</p>
           <div class="author">
@@ -738,7 +896,7 @@
           </div>
         </div>
 
-        <div class="testimonial">
+        <div class="testimonial reveal">
           <div class="stars">★★★★★</div>
           <p class="quote-text">"Comprei sem grandes expectativas pelo preço, mas o conteúdo é muito mais completo do que esperava. Recomendo a quem quer começar aos poucos."</p>
           <div class="author">
@@ -753,36 +911,78 @@
     </div>
   </section>
 
-  <section id="oferta" class="pricing">
+  <section id="oferta" class="pricing reveal">
     <div class="wrap">
       <p class="kicker">Oferta válida apenas hoje</p>
-      <h2 style="color:#faf9f3;">Garanta o seu acesso ao Programa Fígado Livre</h2>
+      <h2 style="color:#faf9f3;">Escolha o seu plano</h2>
 
-      <div class="price-card">
-        <p class="price-was">Valor de referência: 79€</p>
-        <p class="price-now"><sup>€</sup>7,90</p>
-        <p class="price-terms">Pagamento único · sem mensalidades</p>
+      <div class="plans-grid">
 
-        <ul class="price-includes">
-          <li>Plano alimentar completo para o fígado</li>
-          <li>Programa Fígado Livre: guia principal</li>
-          <li>Princípios para limpar o fígado</li>
-          <li>Receitas doces sem açúcar</li>
-          <li>Receitas doces low carb</li>
-          <li>Guia de alívio digestivo</li>
-          <li>Receitas vegetarianas</li>
-          <li>Acesso vitalício e todas as atualizações</li>
-        </ul>
+        <!-- PLANO COMPLETO -->
+        <div class="plan-card plan-featured reveal">
+          <span class="plan-badge">Mais escolhido</span>
+          <p class="plan-tag">Plano Completo</p>
+          <p class="plan-title">Método Fígado Livre</p>
 
-        <a href="#" class="btn btn-block">Quero o programa por 7,90€</a>
-        <p class="microcopy">Acesso imediato após a confirmação do pagamento</p>
+          <div class="plan-price">
+            <span class="amount"><sup>€</sup>14,90</span>
+          </div>
+          <p class="plan-terms">Pagamento único · sem mensalidades</p>
+
+          <p class="plan-includes-lede">Tudo do Plano Essencial, e ainda:</p>
+          <ul class="plan-includes">
+            <li>Cardápio organizado para 30 dias</li>
+            <li>Guia de Bebidas &amp; Infusões</li>
+            <li>Guia de substituição de alimentos</li>
+            <li>Lista de compras semanal</li>
+          </ul>
+
+          <div class="plan-bonus-box">
+            <p class="bonus-heading">🎁 Bónus exclusivos</p>
+            <ul>
+              <li>Desafio 7 Dias Fígado Livre</li>
+              <li>Diário de acompanhamento de 30 dias</li>
+              <li>Guia "O Que Reduzir"</li>
+            </ul>
+          </div>
+
+          <div class="plan-cta">
+            <a href="https://pay.hotmart.com/M107533575N" class="btn btn-block">Quero o Método Completo</a>
+          </div>
+        </div>
+
+        <!-- PLANO ESSENCIAL -->
+        <div class="plan-card reveal">
+          <p class="plan-tag">Plano Essencial</p>
+          <p class="plan-title">Programa Fígado Livre</p>
+
+          <div class="plan-price">
+            <span class="amount"><sup>€</sup>7,90</span>
+          </div>
+          <p class="plan-terms">Pagamento único · sem mensalidades</p>
+
+          <ul class="plan-includes">
+            <li>Plano Alimentar Completo</li>
+            <li>Guia Principal Fígado Livre</li>
+            <li>Princípios para uma alimentação amiga do fígado</li>
+            <li>Receitas doces sem açúcar</li>
+            <li>Receitas doces low carb</li>
+            <li>Guia de alívio digestivo</li>
+            <li>Receitas vegetarianas</li>
+          </ul>
+
+          <div class="plan-cta">
+            <a href="https://pay.hotmart.com/E107531477O" class="btn btn-block">Quero o Plano Essencial</a>
+          </div>
+        </div>
+
       </div>
 
       <p class="urgency">Este preço não se mantém depois de terminada a promoção.</p>
     </div>
   </section>
 
-  <section>
+  <section class="reveal">
     <div class="wrap">
       <div class="guarantee">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z"/><path d="M9 12l2 2 4-4"/></svg>
@@ -794,13 +994,13 @@
     </div>
   </section>
 
-  <section>
+  <section class="reveal">
     <div class="wrap">
       <h2>Perguntas frequentes</h2>
 
       <details open>
         <summary>O pagamento é único ou mensal?</summary>
-        <p>É um pagamento único de 7,90€. Não existem mensalidades nem cobranças escondidas.</p>
+        <p>É sempre um pagamento único (não é mensalidade), com dois planos à escolha: o Plano Essencial por 7,90€ ou o Plano Completo por 14,90€. Não existem cobranças escondidas.</p>
       </details>
       <details>
         <summary>Em quanto tempo recebo o acesso?</summary>
@@ -831,8 +1031,40 @@
 </footer>
 
 <div class="sticky-cta">
-  <a href="#oferta" class="btn btn-block">Quero por 7,90€</a>
+  <a href="#oferta" class="btn btn-block">Ver planos</a>
 </div>
+
+<script>
+  (function () {
+    var elements = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window) || elements.length === 0) {
+      elements.forEach(function (el) { el.classList.add('is-visible'); });
+      return;
+    }
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+    elements.forEach(function (el) { observer.observe(el); });
+  })();
+</script>
+
+<script>
+  (function () {
+    if (typeof fbq === 'undefined') return;
+    var checkoutLinks = document.querySelectorAll('a[href*="pay.hotmart.com"]');
+    checkoutLinks.forEach(function (link) {
+      link.addEventListener('click', function () {
+        fbq('track', 'InitiateCheckout');
+      });
+    });
+  })();
+</script>
 
 </body>
 </html>
